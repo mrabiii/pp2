@@ -8,7 +8,7 @@ namespace ConsoleApp1
 {
     class Program
     {
-        static bool isPrime(int n)
+        static bool isPrime(int n) //create function to check for prime 
         {
             for (int i = 2; i < n; i++)
             {
@@ -23,16 +23,16 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
             string s = Console.ReadLine();
-            int n = int.Parse(s);
-            List<int> numbers = new List<int>();
-            string k = Console.ReadLine();
-            string[] q = k.Split(' ');
+            int n = int.Parse(s);  //transfer from string to int
+            List<int> numbers = new List<int>(); //create dinamic array
+            string k = Console.ReadLine(); //read k
+            string[] q = k.Split(' '); //splits spacing from numbers
             for (int i = 0; i < q.Length; i++)
             {
                 int num = int.Parse(q[i]);
-                if (isPrime(num) == true)
+                if (isPrime(num) == true && num!=1)
                 {
-                    numbers.Add(num);
+                    numbers.Add(num); //add number in the back
                 }
             }
             Console.WriteLine(numbers.Count);
@@ -41,6 +41,7 @@ namespace ConsoleApp1
                 Console.Write(numbers[i]);
                 Console.Write(' ');
             }
+            Console.ReadKey(); //close console by pressing the button
         }
     }
 }
