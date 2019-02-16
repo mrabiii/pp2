@@ -15,10 +15,10 @@ namespace ConsoleApp11
         {
             Console.BackgroundColor = ConsoleColor.Black;
             Console.Clear();
-            FileInfo[] fileInfos = d.GetFiles();
-            DirectoryInfo[] directoryInfos = d.GetDirectories();
-            FileSystemInfo[] fsis = new FileSystemInfo[fileInfos.Length + directoryInfos.Length];
-            directoryInfos.CopyTo(fsis, 0);
+            FileInfo[] fileInfos = d.GetFiles(); //массив из директорий и файлов
+            DirectoryInfo[] directoryInfos = d.GetDirectories(); //содержит информацию по директории
+            FileSystemInfo[] fsis = new FileSystemInfo[fileInfos.Length + directoryInfos.Length]; //содержит информицию про файлы
+            directoryInfos.CopyTo(fsis, 0); //копирует
             fileInfos.CopyTo(fsis, directoryInfos.Length);
             for (int i = 0; i < fsis.Length; i++)
             {
