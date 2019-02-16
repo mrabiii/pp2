@@ -44,7 +44,7 @@ namespace ConsoleApp11
 
         public static void Main(string[] args)
         {
-            string path = @"C:\Users\Гульмира\Desktop";
+            string path = @"C:\Users\Гульмира\Desktop\Calculus 1";
             DirectoryInfo d = new DirectoryInfo(path);
             int cursor = 0;
             int n = d.GetFileSystemInfos().Length;
